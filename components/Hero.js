@@ -1,14 +1,12 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-import Header from "./Header";
+
 
 function Hero() {
   return (
     <div className="relative h-screen ">
-      <div className=" absolute">
-        <Header/>
-      </div>
+      
       <div className="flex justify-between">
         <div className="h-screen flex flex-col  justify-center pl-6 ">
           <p className="font-Poppins text-sm font-bold text-green-800 mb-4">COMING TOGETHER TO</p>
