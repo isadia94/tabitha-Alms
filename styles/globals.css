@@ -4,7 +4,10 @@
 
 html,
 body {
- 
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -16,11 +19,7 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
 }
-
-
-
 
 .logo {
   font-family: "Rozha One", sans-serif;
@@ -48,38 +47,36 @@ a {
   mix-blend-mode: overlay;
 }
 
-
-
 .footer {
-  background-color:#308a00 ;
+  background-color: #308a00;
 }
 
-
-.magenda{
+.magenda {
   font-family: "Magenda";
 }
 
-.aboutSection{
+.aboutSection {
   background-color: #fad909;
 }
 
-.aboutSection h1, .aboutPara{
+.aboutSection h1,
+.aboutPara {
   color: #004727;
 }
-.about-picture{
-  background-image: url('../public/img12.jpg');
+.about-picture {
+  background-image: url("../public/img12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.aboutSection2{
+.aboutSection2 {
   background-color: #308a00;
 }
 
-.leader, .leader2{
+.leader,
+.leader2 {
   color: #004727;
-  
 }
 
 .container {
@@ -121,7 +118,6 @@ a {
   top: 0;
   left: 35%;
   width: 65%;
-  
 
   transition: transform 0.9s ease-in-out;
 }
@@ -136,13 +132,11 @@ a {
   padding-top: 100px;
   display: flex;
   justify-content: center;
- 
+
   flex-direction: column;
-  
 }
 
-.main-slide h1{
-
+.main-slide h1 {
 }
 
 button {
@@ -182,86 +176,74 @@ button:focus {
   border-bottom-right-radius: 5px;
 }
 
-.sidebar_1{
-  background-image: url('../public/img1.jpg');
+.sidebar_1 {
+  background-image: url("../public/img1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_2{
-  background-image: url('../public/img11.jpeg');
+.sidebar_2 {
+  background-image: url("../public/img11.jpeg");
   background-size: cover;
 
   background-position: right;
   background-repeat: no-repeat;
-  
 }
-.sidebar_3{
-  background-image: url('../public/img3.jpg');
+.sidebar_3 {
+  background-image: url("../public/img3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_4{
-  background-image: url('../public/img4.jpg');
+.sidebar_4 {
+  background-image: url("../public/img4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_5{
-  background-image: url('../public/img5.jpg');
+.sidebar_5 {
+  background-image: url("../public/img5.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_6{
-  background-image: url('../public/img6.jpeg');
+.sidebar_6 {
+  background-image: url("../public/img6.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_7{
-  background-image: url('../public/img3.jpeg');
+.sidebar_7 {
+  background-image: url("../public/img3.jpeg");
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  
 }
-.sidebar_8{
-  background-image: url('../public/img14.jpeg');
+.sidebar_8 {
+  background-image: url("../public/img14.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_9{
-  background-image: url('../public/img9.jpg');
+.sidebar_9 {
+  background-image: url("../public/img9.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_10{
-  background-image: url('../public/img2.jpeg');
+.sidebar_10 {
+  background-image: url("../public/img2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-.sidebar_11{
-  background-image: url('../public/img8.jpg');
+.sidebar_11 {
+  background-image: url("../public/img8.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
 
-.slide_1{
+.slide_1 {
   background-color: #222;
 }
-

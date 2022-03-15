@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import About from "../components/About";
@@ -10,15 +10,18 @@ import Hero from "../components/Hero";
 import Leadership from "../components/Leadership";
 import Services from "../components/Services";
 
-
 export default function Home() {
-  
-  const handleClick =()=>{
-    setIsActive(prevIsActive => !prevIsActive)
-  }
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
 
-  const [isActive, setIsActive]= useState(false)
-  if(!isActive){
+  const handleClick = () => {
+    setIsActive((prevIsActive) => !prevIsActive);
+  };
+
+  const [isActive, setIsActive] = useState(false);
+  if (!isActive) {
     return (
       <div>
         <Head>
@@ -42,66 +45,74 @@ export default function Home() {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        
 
         <header className="p-4 bg-transparent flex justify-between items-center w-[1200px] fixed z-30">
-       <div className="flex flex-col pl-6">
-       {/* <h1 className="font-Poppins text-2xl text-center font-bold text-black">Tabitha</h1> */}
-       <img src="./logo.jpeg" className="w-[90px]" alt="" />
-       </div>
+          <div className="flex flex-col pl-6">
+            {/* <h1 className="font-Poppins text-2xl text-center font-bold text-black">Tabitha</h1> */}
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={variants}
+              transition={{ duration: 0.8 }}
+              src="./logo.jpeg"
+              className="w-[90px]"
+              alt=""
+            />
+          </div>
 
-       <nav>
-      
+          <nav>
+            {/* navLinks for large screens */}
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+              className="bg-green-900 flex items-center justify-center px-3 py-3 cursor-pointer rounded-full"
+            >
+              <MenuAlt3Icon
+                className="h-6   text-white "
+                onClick={handleClick}
+              />
+            </motion.div>
+          </nav>
+        </header>
 
-        {/* navLinks for large screens */}
-        <div className="bg-green-900 flex items-center justify-center px-3 py-3 cursor-pointer rounded-md">
-        <MenuAlt3Icon className="h-8  text-white " onClick={handleClick} />
-        </div>
-        
-       </nav>
-  </header>
+        <Hero />
 
-      <Hero />
-    
-      <section className="relative">
-        <About />
-        <Services/>
-  
-        <Leadership />
-      </section>
+        <section className="relative">
+          <About />
+          <Services />
 
-      {/* footer */}
+          <Leadership />
+        </section>
 
-      <Footer />
+        {/* footer */}
+
+        <Footer />
       </div>
-    )
+    );
   }
-  
 
-    return (
-    
+  return (
     <div className="relative">
-       <header className= "p-4 bg-transparent flex justify-between items-center w-[1200px] fixed z-[100]">
-       <div className="flex flex-col pl-6">
-       <h1 className="font-Poppins text-2xl text-center font-bold text-white">Tabitha</h1>
-       </div>
-
-       <nav>
-      
-
-        {/* navLinks for large screens */}
-        <div className="bg-green-900 flex items-center justify-center px-3 py-3 cursor-pointer rounded-md">
-        <MenuAlt3Icon className="h-8  text-white " onClick={handleClick} />
+      <header className="p-4 bg-transparent flex justify-between items-center w-[1200px] fixed z-[100]">
+        <div className="flex flex-col pl-6">
+          <motion.h1
+            className="font-Poppins text-2xl text-center font-bold text-white"
+            animate={{ scale: 1.5 }}
+          >
+            Tabitha
+          </motion.h1>
         </div>
-        
-       </nav>
-  </header>
 
-        <div className="h-screen w-screen bg-black absolute top-0 left-0 z-50 ">
-      </div>
+        <nav>
+          {/* navLinks for large screens */}
+          <div className="bg-green-900 flex items-center justify-center px-3 py-3 cursor-pointer rounded-md">
+            <MenuAlt3Icon className="h-8  text-white " onClick={handleClick} />
+          </div>
+        </nav>
+      </header>
+
+      <div className="h-screen w-screen bg-black absolute top-0 left-0 z-50 "></div>
     </div>
-    )
-
-     
-  
+  );
 }

@@ -1,6 +1,6 @@
 import{useRef, useEffect} from 'react'
 import Image from "next/image";
-
+import { motion } from "framer-motion"
 function About() {
   const aboutRef = useRef(null)
   return (
@@ -40,9 +40,9 @@ function About() {
       </div>
 
       <div className="relative flex items-center justify-center mt-11 md:mt-0  h-screen w-[50%] aboutSection">
-       <div className='h-[550px] w-[360px] about-picture'>
+       <motion.div initial={{opacity:0 , y:50}} whileInView={{opacity:1, y:0,}} viewport={{once:true}} transition={{duration:0.7}}  className='h-[550px] w-[360px] about-picture'>
           
-       </div>
+       </motion.div>
       </div>
     </div>
   
